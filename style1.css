@@ -108,7 +108,8 @@ body {
 }
 
 .content {
-	margin-left: 1em;
+	margin-left: 2em;
+	margin-right: 2em;
 }
 .content li {
 	font-family: "Georgia", sans-serif;
@@ -151,6 +152,13 @@ img {
 	font-family: "Myriad Pro", sans-serif;
 	background-color: black;
 	color: white;
+}
+#about a {
+	color: #0037ff;
+	text-decoration: none;
+}
+#about a:hover {
+	color: #ee76df;
 }
 #keyblade table {
 	margin: 0 auto;
