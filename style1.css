@@ -121,6 +121,7 @@ body {
 }
 .content p {
 	font-family: "Georgia", sans-serif;
+	font-size: 16px;
 }
 .content table {
     border-collapse: collapse;
