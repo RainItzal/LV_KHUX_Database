@@ -41,6 +41,9 @@ body {
 	text-align: center;
 	background-color: inherit;
 }
+.dropbtn {
+	text-transform: uppercase;
+}
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #ee76df;
 }
