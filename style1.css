@@ -161,16 +161,27 @@ img {
 #about a:hover {
 	color: #ee76df;
 }
+#medal tr {
+	text-transform: uppercase;
+}
+#medal td {
+	font-size: 14px;
+}
 #keyblade table {
 	margin: 0 auto;
+	font-size: 14px;
 }
 #skill table {
 	margin: 0 auto;
 }
+#skill th {
+	font-size: 14px;
+}
 #awaken table {
 	margin: 0 auto;
+	font-size: 14px;
 }
-#proud li{
+#proud th{
 	font-size: 14px;
 }
 #proud table {
