@@ -134,13 +134,17 @@ body {
 }
 .content th {
 	vertical-align: left;
+	padding: 15px;
 }
 .content th, td {
+	font-family: "Times New Roman", sans-serif;
 	border-bottom: 1px solid #bbb;
-	padding: 10px;
 }
 .content td {
-    height: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 	text-align: center;
 }
 .content a:hover {
