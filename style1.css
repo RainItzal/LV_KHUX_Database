@@ -28,6 +28,12 @@ body {
 	text-decoration: none;
 	font-size: 16px;
 }
+.navbar .active {
+	background-color: #eeb4df;
+}
+.dropdown-content .active {
+	background-color: #bbbbbb;
+}
 .navbar .icon {
 	display: none;
 }
@@ -117,10 +123,9 @@ body {
 }
 
 #header {
-	background-image: url("https://images.khinsider.com/KINGDOM%20HEARTS%20X/Artwork/Promotional%20Media/UnionX%202nd%20Anniversary%20Art.png");
+	background-image: url("https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/Results%20Background%20Full.png");
 	background-color: #74b2ed;
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	background-attachment: fixed;
 	background-position: center;
 	min-width: 100%;
@@ -173,15 +178,50 @@ body {
 	margin-left: 2em;
 	margin-right: 2em;
 }
-#content li {
-	font-family: "Georgia", sans-serif;
+
+.read-more-state {
+	display: none;
 }
+.read-more-target {
+	opacity: 0;
+	max-height: 0;
+	font-size: 0;
+	display: none;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+	opacity: 1;
+	font-size: inherit;
+	max-height: 999em;
+	display: block;
+}
+.read-more-trigger {
+	display: block;
+	padding: 0 .5em;
+	line-height: 2;
+	font-size: 16px;
+	font-family: "Roboto", sans-serif;
+}
+.read-more-trigger:hover {
+	background-color: #ddd;
+}
+.info img {
+	display: inline-block;
+}
+.info a {
+	text-decoration: none;
+}
+
 #content h3 {
 	font-size: 150%;
 	font-family: "Myriad Pro", sans-serif;
 	text-align: center;
 }
-#content p {
+#content h4 {
+	font-size: 100%;
+	font-family: "Myriad Pro", sans-serif;
+	padding: 0;
+}
+#content p, li {
 	font-family: "Helvetica Neue", sans-serif;
 	font-size: 14px;
 }
@@ -206,8 +246,18 @@ body {
 	padding-right: 10px;
 	text-align: center;
 }
+#content a {
+	text-decoration: none;
+}
 #content a:hover {
 	color: #ee76df;
+}
+#content hr {
+	color: #ddd;
+	background-color: #ddd;
+	height: 3px;
+	width: 100%;
+	border: 0;
 }
 
 .kbimagesbtn {
