@@ -263,42 +263,24 @@ body {
 	border: 0;
 }
 
-.kbimagesbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+#buttons {
+	text-align: center;
+	margin: 20px;
 }
-.kbimagesbtn:hover, .kbimagesbtn:focus {
-    background-color: #2980B9;
+#buttons button {
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	background-color: #fbfc99;
+	border: 1px solid black;
+	border-radius: 10px 30px;
+	padding: 10px 20px;
+	margin: auto 5px;
 }
-.kbdropdown {
-    position: relative;
-    display: inline-block;
-}
-.kbimages-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-	-webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.kbimages-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.kbimages-content a:hover {
-	background-color: #ddd
-}
-.show {
-	display:block;
+#buttons button:hover {
+	background-color: #ee76df;
+	-webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
 }
 
 img {

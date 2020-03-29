@@ -95,8 +95,15 @@
 
 	<div id="content">
 		<h3>Bad Guy Breaker</h3>
-
-		<img src="https://www.khuxwiki.com/w/images/e/ee/Bad_Guy_Breaker_%28Upgrade_5%29_KHX.png" alt="Bad Guy Breaker">
+		
+		<div id="buttons">
+			<button onclick="changeImage1();">Base</button>
+			<button onclick="changeImage2();">Upgrade 1</button>
+			<button onclick="changeImage3();">Upgrade 2</button>
+			<button onclick="changeImage4();">Upgrade 3</button>
+		</div>
+		
+		<img id='images' src='https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/BadGuyBreaker01.png'/>
 
 		<br>
 
@@ -122,6 +129,27 @@
 		} else {
 			x.className = "navbar";
 		}
+	}
+	</script>
+	<script>
+	function changeImage1() {
+		let img1 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/BadGuyBreaker01.png';
+		document.getElementById('images').src = img1;
+	}
+
+	function changeImage2() {
+		let img2 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/BadGuyBreaker02.png';
+		document.getElementById('images').src = img2;
+	}
+
+	function changeImage3() {
+		let img3 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/BadGuyBreaker03.png';
+		document.getElementById('images').src = img3;
+	}
+
+	function changeImage4() {
+		let img4 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/BadGuyBreaker04.png';
+		document.getElementById('images').src = img4;
 	}
 	</script>
 
