@@ -18,6 +18,7 @@ body {
 	top: 0;
 	width: 100%;
 	border-bottom: 1px solid black;
+	z-index: 1
 }
 .navbar a {
 	float: left;
@@ -284,7 +285,6 @@ body {
 }
 
 #images {
-	z-index: -1;
 	-webkit-filter: drop-shadow(5px 5px 5px #222);
 	filter: drop-shadow(5px 5px 5px #222);
 }
