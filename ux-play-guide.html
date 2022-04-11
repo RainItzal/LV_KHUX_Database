@@ -1,0 +1,1808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{Favicon}">
+
+	<title>KHUχDR Database: Uχ Play Guide</title>
+	
+	<style>
+	    html, body {
+            	margin: 0;
+                padding: 0;
+            }
+            body {
+                line-height: normal !important;
+            }
+            .navbar {
+                font-family: "Franklin Gothic Book", sans-serif;
+            	background-color: #fbfc99;
+            	position: fixed;
+            	top: 0;
+            	width: 100%;
+            	border-bottom: 1px solid black;
+            	z-index: 99;
+            }
+            .navbar a {
+            	font-size: 16px;
+            	float: left;
+            	display: block;
+            	color: black;
+            	text-align: center;
+            	padding: 10px 12px;
+            	text-decoration: none;
+            }
+            .navbar .active {
+            	background-color: #eeb4df;
+            }
+            .dropdown-content .active {
+            	background-color: #bbbbbb;
+            }
+            .navbar .icon {
+            	display: none;
+            }
+            .dropdown {
+            	float: left;
+            	overflow: hidden;
+            }
+            .dropdown .dropbtn {
+            	font-size: 16px;
+            	border: none;
+            	outline: none;
+            	color: black;
+            	padding: 10px 12px;
+            	background-color: inherit;
+            	font-family: inherit;
+            	margin: 0;
+            }
+            .dropdown-content {
+            	font-size: 0; /*removes empty space between columns*/
+            	display: none;
+            	position: absolute;
+            	background-color: #f9f9f9;
+            	min-width: 160px;
+            	-webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            	-moz-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            	z-index: 1;
+            	column-count: 2;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				border-bottom: 1px solid black;
+            }
+            .dropdown-content a {
+            	font-size: 16px;
+            	float: none;
+            	color: black;
+            	padding: 8px 10px;
+            	text-decoration: none;
+            	display: block;
+            	text-align: left;
+            }
+            .navbar a:hover, .dropdown:hover, .dropbtn:hover {
+            	background-color: #ee76df;
+            	color: black;
+            }
+            .dropdown-content a:hover {
+            	background-color: #ddd;
+            	color: black;
+            }
+            .dropdown:hover .dropdown-content {
+            	display: block;
+            }
+            @media screen and (max-width: 600px) {
+            	.navbar a:not(:first-child), .dropdown .dropbtn {
+            	display: none;
+            	}
+            	.navbar a.icon {
+            	float: right;
+            	display: block;
+            	}
+            }
+            @media screen and (max-width: 600px) {
+            	.navbar.responsive {
+            		position: fixed;
+            	}
+            	.navbar.responsive a.icon {
+            		position: absolute;
+            		right: 0;
+            		top: 0;
+            	}
+            	.navbar.responsive a {
+            		float: none;
+            		display: block;
+            		text-align: left;
+            	}
+            	.navbar.responsive .dropdown {
+            		float: none;
+            	}
+            	.navbar.responsive .dropdown-content {
+            		position: relative;
+            	}
+            	.navbar.responsive .dropdown .dropbtn {
+            		display: block;
+            		width: 50%;
+            		text-align: left;
+            		box-sizing: border-box;
+            		display: flex;
+            		flex-wrap: wrap;
+            	}
+            }
+            
+            #myheader {
+            	background-image: url("https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/Results%20Background%20Full.png");
+            	background-color: #74b2ed;
+            	background-repeat: repeat;
+            	background-attachment: fixed;
+            	background-position: center;
+            	min-width: 100%;
+            }
+            #myheader h1 {
+            	text-align: center;
+            	text-shadow: 3px 3px 7px #000;
+            	color: white;
+            	font-family: "Open Sans", sans-serif;
+            	font-size: 3.3em;
+            	letter-spacing: .1em;
+            	margin-top: 5;
+            	padding-top: 42px;
+            	box-sizing: border-box;
+            	width: 100%;
+            	margin-bottom: 25px;
+            }
+            #myheader h2 {
+            	text-align: center;
+            	text-shadow: 3px 3px 7px #000;
+            	color: white;
+            	font-family: "Segoe UI", sans-serif;
+            	font-size: 1.6em;
+            	font-weight: 400;
+            	margin-bottom: 48px;
+            	box-sizing: border-box;
+            	width: 100%;
+            }
+            #myheader hr {
+            	color: #ddd;
+            	background-color: #000000;
+            	height: 1px;
+            	width: 100%;
+            	border: 0;
+            	overflow: visible;
+            }
+            #myheader a {
+            	color: #ffffff;
+            	text-decoration: none;
+            }
+            #myheader a:hover {
+            	color: #ee76df;
+            }
+            #myheader img {
+            	margin: auto;
+            	position: fixed;
+            	width: 100%;
+            }
+            
+            .main {
+                max-width: 80% !important;
+            }
+            
+            #content {
+            	margin-left: 2em;
+            	margin-right: 2em;
+            }
+            
+            #content .read-more-state {
+            	display: none;
+            }
+            #content .read-more-target {
+            	opacity: 0;
+            	max-height: 0;
+            	font-size: 0;
+            	display: none;
+            }
+            #content .read-more-state:checked ~ .read-more-wrap .read-more-target {
+            	opacity: 1;
+            	font-size: inherit;
+            	max-height: 999em;
+            	display: block;
+            }
+            #content .read-more-trigger {
+            	display: block;
+            	padding: 0 .5em;
+            	line-height: 2;
+            	font-size: 16px;
+            	font-family: "Roboto", sans-serif;
+            }
+            #content .read-more-trigger:hover {
+            	background-color: #ddd;
+            }
+            #content .info img {
+            	display: inline-block;
+            }
+            #content .info a {
+            	text-decoration: none;
+            }
+            
+            #content h3 {
+            	font-size: 150%;
+            	font-family: "Myriad Pro", sans-serif;
+            	text-align: center;
+            }
+            #content h4 {
+            	font-size: 100%;
+            	font-family: "Myriad Pro", sans-serif;
+            	padding: 0;
+            }
+            #content p, li {
+            	font-family: "Helvetica Neue", sans-serif;
+            	font-size: 14px;
+            }
+            #content table {
+				margin-right: auto;
+				margin-left: 0px
+			}
+            #content tr:nth-child(even) {
+            	background-color: #f2f2f2;
+            }
+            #content th {
+            	vertical-align: left;
+            	padding: 15px;
+            }
+            #content th, td {
+            	font-family: "Times New Roman", sans-serif;
+            	border-bottom: 1px solid #bbb;
+            }
+            #content td {
+            	padding-top: 5px;
+            	padding-bottom: 5px;
+            	padding-left: 10px;
+            	padding-right: 10px;
+            	text-align: center;
+            }
+            #content a {
+            	text-decoration: none;
+            	color: blue;
+            }
+            #content a:hover {
+            	color: #ee76df;
+            }
+            #content hr {
+            	color: #ddd;
+            	background-color: #ddd;
+            	height: 3px;
+            	width: 100%;
+            	border: 0;
+            }
+            
+            #buttons {
+				text-align: center;
+				margin: 20px;
+			}
+			#buttons button {
+				font-family: "Open Sans", sans-serif;
+				font-size: 14px;
+				background-color: #fbfc99;
+				border: 1px solid hsl(50, 50%, 70%);
+				border-radius: 1em;
+				box-shadow: 0px 5px 0px 0px hsl(50, 50%, 70%);
+				padding: 10px 20px;
+				margin: auto 5px;
+			}
+			#buttons button:hover {
+				background-color: #ee76df;
+				border: 1px solid hsl(320, 70%, 40%);
+				box-shadow: 0px 5px 0px 0px hsl(320, 70%, 40%);
+			}
+
+			#content #images {
+				z-index: -1;
+				-webkit-filter: drop-shadow(5px 5px 5px #222);
+				filter: drop-shadow(5px 5px 5px #222);
+			}
+            
+            #content img {
+            	margin: 0 auto;
+            	display: block;
+            	max-width: 100%;
+            }
+            
+            /* Tables */
+            #content table {
+            	margin: 0 auto;
+            	font-size: 16px;
+            }
+            #main {
+            	font-family: "Myriad Pro", sans-serif;
+            	background-color: black;
+            	color: white;
+            }
+            
+            #footer {
+            	text-align: center;
+            	margin: 0;
+            }
+            #footer hr {
+            	color: #ddd;
+            	background-color: #ddd;
+            	height: 1px;
+            	width: 100%;
+            	border: 0;
+            }
+            #footer p {
+            	font-family: "Segoe UI", sans-serif;
+            	font-size: 14px;
+            }
+            #footer a {
+            	color: #0037ff;
+            	text-decoration: none;
+            }
+            #footer a:hover {
+            	color: #ee76df;
+            }
+	</style>
+
+</head>
+
+<body>
+
+	<div id="header">
+		<h1><a href="dbindex">KHUχDR Database</a></h1>
+		<h2>Your one stop source of Japanese KHUχDR info!</h2>
+		<hr/>
+	</div>
+
+	<div class="navbar" id="myNavbar">
+		<a href="dbindex">Home</a>
+		<a href="about">About</a>
+		<div class="dropdown">
+			<button class="dropbtn">Medals
+				<i class="droptent"></i>
+			</button>
+				<div class="dropdown-content">
+					<a href="ux-medal-album">Album</a>
+					<a href="ux-compare">Comparisons</a>
+					<a href="https://docs.google.com/spreadsheets/d/12zeSoJKzJ5oQxJA3rKtzumFB16fUFwZ24JwQoExum3o/edit?usp=sharing" target="_blank" title="Redirects to spreadsheet.">Translation Tool</a>
+					<a href="ux-awakening">Awakenings</a>
+					<a href="ux-skills">Skills</a>
+				</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Keyblades
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="ux-keyblade">Information</a>
+				<a href="ux-subslots">Subslots</a>
+				<a href="ux-starlight">Starlight</a>
+				<a href="ux-rock-splendor">Rock Splendor</a>
+				<a href="ux-last-resort">Last Resort</a>
+				<a href="ux-desire-lamp">Desire Lamp</a>
+				<a href="ux-power-of-hero">Power of Hero</a>
+				<a href="ux-la-vie-en-rose">La Vie en Rose</a>
+				<a href="ux-moogle-of-glory">Moogle of Glory</a>
+				<a href="ux-sleeping-lion">Sleeping Lion</a>
+				<a href="ux-fantasy-notes">Fantasy Notes</a>
+				<a href="ux-crystal-works">Crystal Works</a>
+				<a href="ux-fenrir">Fenrir</a>
+				<a href="ux-dark-biter">Dark Biter</a>
+				<a href="ux-missing-ache">Missing Ache</a>
+				<a href="ux-fairy-star">Fairy Star</a>
+				<a href="ux-diamond-dust">Diamond Dust</a>
+				<a href="ux-bad-guy-breaker">Bad Guy Breaker</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Quest
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="ux-jewel">Jewels</a>
+				<a href="ux-standard">Standard</a>
+				<a href="ux-proud">Proud</a>
+				<a href="ux-challenges">Challenges</a>
+				<a href="ux-enemies">Enemies</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Miscellaneous
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="ux-dalmatians">101 Dalmatians</a>
+				<a href="ux-avatar-luck">Avatar Luck</a>
+				<a href="ux-passives">Passives</a>
+				<a href="ux-pet">Pets</a>
+				<a href="ux-play-guide">Play Guide</a>
+				<a href="ux-pvp">PVP</a>
+				<a href="ux-records">Records</a>
+				<a href="ux-titles">Titles</a>
+				<a href="ux-uc-phrases">UC Phrases</a>
+				<a href="ux-updates">Version Updates</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Dark Road
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="dr-card-album">Cards &#38; Enemies</a>
+				<a href="dr-levels">Levels</a>
+				<a href="dr-play-guide">Play Guide</a>
+				<a href="dr-updates">Version Updates</a>
+			</div>
+		</div>
+		<a href="links">Links</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+	<div id="content">
+		<h3>Play Guide</h3>
+		
+		<p style="font-style: italic">Includes information on how mechanics work, features, some event explanations, and some translated work. [Image heavy.]</p>
+		
+		<p>Click the label to view.</p>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-1" class="read-more-trigger">Burst</label>
+			<input type="checkbox" class="read-more-state" id="post-1" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 1.4.0 [<a href="http://cache.sqex-bridge.jp/guest/information/22394" target="_blank">x</a>]</p>
+				<p>A new technique that is used once per quest by tapping the icon in the top right.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o3opNeMtp">
+				<ul>
+					<li>Burst is a function that is available once a medal achieves guilt.</li>
+					<li>In quests and raid boss battles, it can only be used once.</li>
+					<li>The level of Burst can increase.</li>
+				</ul>
+				<h4>Leveling Burst</h4>
+				<img src="https://cache.sqex-bridge.jp/img/o390NmX9F">
+				<p>Burst level can be increased by the following:</p>
+				<ul>
+					<li>Achieving any percentage of guilt on a medal.</li>
+					<li>Achieving max guilt on a medal.</li>
+				</ul>
+				<p style="font-size: 12px">&#8251; Burst level will not increase if you max guilt another of the same medal.
+				<br>&#8251; Status bonus and non-Status Bonus medals still count as the same medal.
+				</p>
+				<h4>Other</h4>
+				<p>Medals that have been guilted or have max guilt before the update will have burst already applied.</p>
+				<p>Level of Burst on a particular medal can be checked in the medal album.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o3ouNLLE5">
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-2" class="read-more-trigger">Union Cross</label>
+			<input type="checkbox" class="read-more-state" id="post-2" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.0.0 [<a href="http://cache.sqex-bridge.jp/guest/information/26929" target="_blank">x</a>]</p>
+				<h4>Play with up to 6 people at once!</h4>
+				<img src="https://cache.sqex-bridge.jp/img/o1yPNnQYP">
+				<h4>About</h4>
+				<p>Defeat Heartless with other players-- either from your party or union.
+				<br>Get Cross Coins by clearing the quest and through other means.</p>
+				<p>&#8251; Cross Coins can only be used during events.
+				<br>&#8251; Access Union Cross from the Quest menu. You must have cleared story quest 81.</p>
+				<h4>How Quests Work</h4>
+				<p>The main objective is to clear the quest. Additionally, Time Missions may appear.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1UbNyZW6">
+				<p>The stage and missions are randomly selected when you enter. So be prepared for all situations.</p>
+				<h4>Matching</h4>
+				<p>The Union Cross start screen is similar to the normal quest screen.</p>
+				<p>Immediate Start 「すぐにスタート」 will gather yourself and other union members.
+				<br>Party Start 「パーティーでスタート」 is where you can join your other party members.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1yYN77B3T">
+				<p>On the quest result screen, play with the same members 「同じメンバーと再プレイ」 will allow you to continue playing with the same people.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1yfN7FVWm">
+				<h4>Resurrection</h4>
+				<p>When you lose all your HP, you become inactive, and a count and gauge is displayed.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1y1Niugy">
+				<p>Party members can revive you by tapping the icon as many times as the count indicates, assuming this has been done before the gauge disappears.
+				<br>Members that tap will use one medal slot for each tap.
+				<br>Every time you reach 0 HP, the count increases.
+				<br>
+				<br>However, if the gauge disappears without being resurrected, you can use jewels to restore your HP, or you can retire.</p>
+				<h4>Comments</h4>
+				<p>During quests, you can send messages to other members by tapping the icon in the bottom right and releasing on the comment you want to use.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1yXNJM7j">
+				<p>On the Union Cross start screen, you can edit comments through the bottom left button: Comment Edit 「コメント編集」.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1yyNyVxx">
+				<h4>Other</h4>
+				<p>By pressing the comment button and closing it, icons of your party member locations are displayed.</p>
+				<p>Players that have played together can check the history from the main screen by tapping 「一緒に遊んだプレイヤー」. So when you want to invite the same people, search there.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-3" class="read-more-trigger">Awakening Abilities</label>
+			<input type="checkbox" class="read-more-state" id="post-3" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.0.0 [<a href="http://cache.sqex-bridge.jp/guest/information/37748" target="_blank">x</a>] [<a href="http://cache.sqex-bridge.jp/guest/information/37651" target="_blank">x</a>]</p>
+				<h4>About</h4>
+				<p>By synthesizing the following, an Awakening Ability is added to a medal:</p>
+				<ul>
+					<li>the same medal of any rarity</li>
+					<li>a designated awakening medal</li>
+				</ul>
+				<p>Awakening Ability is an effect that always activates.</p>
+				<ul>
+					<li>Mickey &#38; Broom Servant medals cannot have Awakening Abilities.</li>
+					<li>Even if multiple of the same medals are synthesized at the same time, only one Awakening Ability will occur.</li>
+				</ul>
+				<img src="https://cache.sqex-bridge.jp/img/o1fbNk1o">
+				<p>There are multiple types of Awakening Abilities and are randomly decided each synthesis.
+				<br>Depending on the medal, certain number of slots that can be awakened are fixed.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1fjNoPV0">
+				<p>When you try to create a new Awakening Ability with the medal at full slots, you can choose to overwrite or not. If you don’t, it will fuse as normal.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o1f3NyITM">
+				<h4>List of Awakening Abilities</h4>
+				<p>Effective on the whole deck:</p>
+				<ul>
+					<li>Max ability gauge +2 「アビリティゲージ最大値＋2」</li>
+					<li>Max HP +800 「HP最大値+800」</li>
+					<li>Poison resistance 20&#37; 「毒耐性20&#37;」</li>
+					<li>Paralysis resistance 20&#37; 「麻痺耐性20&#37;」</li>
+					<li>Sleep tolerance 20&#37; 「睡眠耐性20&#37;」</li>
+				</ul>
+				<p>Effective on the medal with the awakening:</p>
+				<ul>
+					<li>Ground enemy defence -60&#37; 「地上エネミーの防御力-60&#37;」</li>
+					<li>Air enemy defence -60&#37; 「空中エネミーの防御力-60&#37;」</li>
+					<li>Raid boss battle damage +40&#37; 「レイド戦でダメージ+40&#37;」</li>
+					<li>Additional attack +40&#37; 「追加攻撃 威力40&#37;」: attack again with the same medal. 40% of damage dealt.</li>
+					<li>Attack power +1000 「攻撃力+1000」</li>
+					<li>Defence power +2000 「防御力+2000」</li>
+				</ul>
+				<p>Even if a medal has Additional Attack and enemy defences more than once, only one will take effect. The others can be stacked.</p>
+				<h4>Exclusive Awakening Medals</h4>
+				<p>Combining the Awakening Medal with the original medal has the following effects:</p>
+				<ul>
+					<li>Adds an Awakening Ability</li>
+					<li>Increases the Ability level by 1</li>
+				</ul>
+				<p>Notes:</p>
+				<ul>
+					<li>Awakening Medals are only for synthesizing, it does not act like the original medal.</li>
+					<li>Its cost is at 999 so it can't be equipped to a deck. However, it can be equipped to the pet slot or used as a partner medal, but isn't suitable for attacking. (The Awakening Medal will have the appearance as its original medal except in greyscale.)</li>
+					<li>It counts for 15 pet points.</li>
+					<li>It will always be pulled with Status Bonus, but there will be no change to the medal.</li>
+					<li>In the medal album, the original medal and Awakening Medal are treated the same.</li>
+					<li>When the original medal is a score bonus medal in a High Score event, the Awakening Medal will be too.</li>
+				</ul>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-4" class="read-more-trigger">Pets</label>
+			<input type="checkbox" class="read-more-state" id="post-4" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.3.0 [<a href="http://cache.sqex-bridge.jp/guest/information/32675" target="_blank">x</a>]</p>
+				<p>The pet system allows you to adventure with your pet!
+				<br>&#8251; Story quest 14 must be completed.</p>
+				<h4>About</h4>
+				<img src="https://cache.sqex-bridge.jp/img/opEpNv3cB">
+				<p>Pets are equipped with medals and will attack with the medal that is used as your sixth slot.
+				<br>There are also special skills that can be invoked during battle.
+				<br>
+				<br>You can also name your pet, change its appearance, and power it up.</p>
+				<h4>Equipping your pet with a medal to attack</h4>
+				<img src="https://cache.sqex-bridge.jp/img/opY7NxELH">
+				<p>Press the Pet 「ペット」 button on the equipment screen to drag a medal to its slot.
+				<br>The equipped medal is used as a sixth slot during battle.</p>
+				<h4>Appearance &#38; Strengthening</h4>
+				<p>Tap on your pet by your avatar in the upper left corner of the screen to open the pet main screen where you can change its name, appearance, power-up, and view special skills.</p>
+				<img src="https://cache.sqex-bridge.jp/img/opYoNfxBI">
+				<h4>Create your own pet!</h4>
+				<p>By pressing the "Co-ord" 「コーデ」 button, you can change your pet’s appearance!
+				<br>Mix and match parts to create your unique pet.</p>
+				<img src="https://cache.sqex-bridge.jp/img/opEINYDVh">
+				<h4>Strengthening pet rank</h4>
+				<p>By pressing the "power-up" 「強化」 button, you can set medals (separate from medals used in battle) to enhance pet rank.</p>
+				<img src="https://cache.sqex-bridge.jp/img/opYmNsEeS">
+				<p>The pet rank is determined by the total points of the six medals.
+				<br>(A) When the rank increases, the pet medal slot multiplier will increase. The pet may also learn new skills.</p>
+				<p>Medals have points that strengthen the pet’s rank which vary on the medal. Medals with more awakening ability slots have increased points.
+				<br>(B) When the "leave it to you" 「おまかせ」 button is pressed, the medals with the most points will be automatically set.</p>
+				<p>Skills will be activated under certain conditions during battle to help the player.
+				<br>Skills and their details can be checked via the "Special Skills List" 「特技一覧」 button on the pet main screen.</p>
+				<p>&#8251; Medals used for increasing pet rank will not be consumed, so they can be changed freely.
+				<br>&#8251; Medals equipped in Keyblades can also be used for leveling.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-5" class="read-more-trigger">Missions</label>
+			<input type="checkbox" class="read-more-state" id="post-5" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.4.0 [<a href="http://cache.sqex-bridge.jp/guest/information/34108" target="_blank">x</a>]</p>
+				<p>Clear the mission conditions to earn rewards. Missions are given on a daily, weekly, or monthly basis.</p>
+				<p>Missions can be checked by pressing the mission button on the Home screen.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oGnMN70Y81">
+				<p>Note: In a later update, missions can instead be accessed through the icon by your avatar icon.</p>
+				<p>When a condition is cleared, rewards are immediately available. Open the mission list and either tap the "receive" 「受け取る」 button to get that mission's reward or the "take all" 「一括受け取り」 button to get all available rewards.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oGDiN1eP1">
+				<p>By tapping the "challenge" 「挑戦する」 button by an uncleared mission, you can switch to the appropriate quest selection screen or the equipment screen.</p>
+				<p>There are 4 categories:</p>
+				<ol>
+					<li>[Beginner]: Available for 30 days for new accounts. *Available for new accounts created after version 2.4.0.</li>
+					<li>[Daily]: Daily solo missions.</li>
+					<li>[Weekly]: Weekly party missions.</li>
+					<li>[Limited Time]: Time limited solo missions.</li>
+				</ol>
+				<p>For party missions, all party member participation will be counted as one.</p>
+				<h4>Beginner Missions</h4>
+				<table>
+					<tr id="main">
+						<th>Condition</th>
+						<th>Reward</th>
+					</tr>
+					<tr>
+						<td>Clear story quest 6.</td>
+						<td>Jewel x100</td>
+					</tr>
+					<tr>
+						<td>Clear story quest 14.</td>
+						<td>Jewel x100</td>
+					</tr>
+					<tr>
+						<td>Clear story quest 24.</td>
+						<td>Jewel x100</td>
+					</tr>
+					<tr>
+						<td>Clear story quest 34.</td>
+						<td>Jewel x100</td>
+					</tr>
+					<tr>
+						<td>Clear story quest 130.</td>
+						<td>Jewel x100</td>
+					</tr>
+					<tr>
+						<td>Have a total of 30 000 power in your deck
+						<br>(total of strength and defence in your currently equipped deck).</td>
+						<td>Jewel x100</td>
+					</tr>
+					<tr>
+						<td>Have a total of 50 000 power in your deck.</td>
+						<td>Jewel x100</td>
+					</tr>
+					<tr>
+						<td>Have a total of 120 000 power in your deck.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Draw 3 medals.</td>
+						<td>Skip Ticket II x5</td>
+					</tr>
+					<tr>
+						<td>Draw 7 medals.</td>
+						<td>Skip Ticket II x10</td>
+					</tr>
+					<tr>
+						<td>Clear 5 strengthening quests for EXP medals of all attributes.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Clear 5 strengthening quests for materials of all Keyblades.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Complete 1 Tutorial quest.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Complete 6 Tutorial quests.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Upgrade Starlight to +4.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Upgrade Starlight to +11.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Upgrade Starlight to +21.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Upgrade Rock Splendor to +5.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Upgrade Last Resort to +5.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Upgrade Desire Lamp to +5.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Collect 500 000 Lux.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Collect 2 000 000 Lux.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Defeat 3 raid bosses.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Defeat 10 raid bosses.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Get max Guilt on 1 medal.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Get max Guilt on 2 medals.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Get a Burst level of 20.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Get a Burst level of 50.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Reach Spirit rank 2.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Reach Spirit rank 3.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Clear Proud Mode up to quest 3.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Clear 10 event quests.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Clear 10 Coliseum rounds.</td>
+						<td>Jewel x50</td>
+					</tr>
+					<tr>
+						<td>Clear 10 Union Cross quests.</td>
+						<td>Jewel x50</td>
+					</tr>
+				</table>
+				
+				<h4>Daily Missions</h4>
+				<p>10 missions with 30 jewels per objective.</p>
+				<ul>
+					<li>Participate in 1 VS Player match</li>
+					<li>Participate in 2 VS Player matches</li>
+					<li>Participate in 3 VS Player matches</li>
+					<li>Clear 1 quest</li>
+					<li>Clear 2 quests</li>
+					<li>Clear 3 quests</li>
+					<li>Defeat 1 raid boss</li>
+					<li>Collect 100 Lux</li>
+					<li>Collect 1000 Lux</li>
+					<li>Collect 10 000 Lux</li>
+				</ul>
+				
+				<h4>Weekly Missions</h4>
+				<p>10 missions with 100 jewels per objective.</p>
+				<ul>
+					<li>Defeat 10 raid bosses</li>
+					<li>Defeat 50 raid bosses</li>
+					<li>Defeat 150 raid bosses</li>
+					<li>Collect 5 000 000 Lux</li>
+					<li>Collect 50 000 000 Lux</li>
+					<li>Collect 100 000 000 Lux</li>
+					<li>Collect 300 000 000 Lux</li>
+					<li>Clear 20 Union Cross quests</li>
+					<li>Clear 40 Union Cross quests</li>
+					<li>Clear 80 Union Cross quests</li>
+				</ul>
+				
+				<h4>Limited Time</h4>
+				<ul>
+					<li>Participate in 15 VS Player matches</li>
+					<li>Participate in 30 VS Player matches</li>
+					<li>Generally has Lux collection objectives for pet parts.</li>
+				</ul>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-6" class="read-more-trigger">Boosts</label>
+			<input type="checkbox" class="read-more-state" id="post-6" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.4.0 [<a href="http://cache.sqex-bridge.jp/guest/information/34107" target="_blank">x</a>]</p>
+				<p>Boost items can strengthen medals for a limited time.</p>
+				<p>Boosts can be obtained through rewards from events and other means. It will automatically take effect when you receive it.
+				<br>&#8251; The end date and time is fixed.</p>
+				<p>You can check your Boost inventory via the "Boost" 「ブースト」 button on your profile screen.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oGnwNaDpE">
+				<p>Medals that are affected by the Boost will have info displayed on its medal detail screen.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oGnjNjmlo">
+				<p>&#8251; Boosts with the same attribute can be stacked.
+				<br>&#8251; Copy abilities: The copy medal's attribute does not matter. Boosts of the copied medal's attribute will be applied. Example: HD Namine copying Dual Wield Roxas [EX] will only be affected by Power Boosts, not Magic Boosts. Same applies for Upright and Reverse Boosts.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-7" class="read-more-trigger">Subslots</label>
+			<input type="checkbox" class="read-more-state" id="post-7" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.6.0 [<a href="http://cache.sqex-bridge.jp/guest/information/40709" target="_blank">x</a>]</p>
+				<p>Set 7* medals to increase Keyblade slot multipliers!</p>
+				<img src="https://cache.sqex-bridge.jp/img/oTkXN7mYkL">
+				<p>Subslots have been added to each Keyblade.</p>
+				<p>By setting 7* medals into subslots the multiplier of the Keyblade's slots will be increased.
+				<br>&#8251; For pets, the pet slot multiplier is affected by the select Keyblade's subslots.</p>
+				<p>The value increase depends on the medal's Guilt tier.</p>
+				<h4>Setting the Medals</h4>
+				<img src="https://cache.sqex-bridge.jp/img/oTkfNCBXP">
+				<p>Subslot medals can be set by opening the Subslot menu from the Keyblade equipment screen.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oTkQN8d9J">
+				<p>Only 7* medals can be set in subslots.
+				<br>Additionally, only medals that match the attribute and direction can fit.</p>
+				<p>To benefit from subslots, you must place medals in order.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-8" class="read-more-trigger">7* Rarity, Blue Fairies</label>
+			<input type="checkbox" class="read-more-state" id="post-8" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.6.0 [<a href="http://cache.sqex-bridge.jp/guest/information/40708" target="_blank">x</a>]</p>
+				<h4>About</h4>
+				<img src="https://cache.sqex-bridge.jp/img/os2GNfn1w">
+				<p>The update allows medals to evolve into 7*.
+				<br>&#8251; EXP medals, evolution medals, Munny medals, and awakening medals will not be able to evolve to 7*.</p>
+				<p>All 7* medals have their max strength exceeding 10 000, ability enhancements, and multiplier increase.</p>
+				<p>Some 7* medals (premiums and high score event medals) have had their abilities include +3 Upright or Reverse strength.</p>
+				<p>Example: Sora HD Ver</p>
+				<table>
+					<tr id="main">
+						<th>Medal Name</th>
+						<th>Ability Effect</th>
+						<th>Max Strength</th>
+						<th>Max Multiplier w/ Max Guilt</th>
+					</tr>
+					<tr>
+						<td>Sora HD Ver (6*)</td>
+						<td>+1 PSM strength for 2 turns</td>
+						<td>7356</td>
+						<td>x3.47-7.08</td>
+					</tr>
+					<tr>
+						<td>Sora HD Ver <span style="color: red">(7*)</span></td>
+						<td><span style="color: red">+3 Upright strength</span>, +1 PSM strength for 2 turns</td>
+						<td><span style="color: red">12121</span></td>
+						<td><span style="color: red">x15.33-18.95</span></td>
+					</tr>
+				</table>
+				<h4>Evolving 6* Medals to 7*</h4>
+				<p>Evolving 6* to 7* requires the following conditions:</p>
+				<ul>
+					<li>Max level and max Guilt &#37;.</li>
+					<li>Have the needed Blue Fairy medals.</li>
+				</ul>
+				<p>&#8251; There are 8 kinds of Blue Fairy medals: tier 1 - tier 8.
+				<br>&#8251; When evolving to 7*, five of the Blue Fairy medals of the base medal's Guilt tier is consumed. (Ex: Tier 6 medals use five [Guilt 6] Blue Fairy medals.)</p>
+				<p>Blue Fairy medals can be obtained through PVP ranking rewards and Premium Quests.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oT5hNhatl">
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-9" class="read-more-trigger">PVP</label>
+			<input type="checkbox" class="read-more-state" id="post-9" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.6.0 [<a href="https://cache.sqex-bridge.jp/guest/information/40706" target="_blank">x</a>]</p>
+				<h4>About</h4>
+				<img src="https://cache.sqex-bridge.jp/img/oTceNPq2K">
+				<p>VS Player (PvP Mode) is Coliseum content where players fight each other using multiple Keyblades.</p>
+				<p>HP is infinite, so whoever deals the most damage to the opponent wins.</p>
+				<p>The rankings are held weekly from Tuesday to Monday. Usable Keyblades are fixed for each week as well.</p>
+				<p>The number of times you can challenge per day are fixed, and if you purchase jewels, the number of times is increased.
+				<br>&#8251; This is valid until 23:59 Sunday of the week of your purchase.</p>
+				<h4>Battle Rules</h4>
+				<p>Three Keyblades are used; each turn is alternated between the players. The player who deals the most damage wins, with the best of 2 out of 3.</p>
+				<p>&#8251; Whoever attacks first each turn is alternated.
+				<br>&#8251; Buffs and debuffs that last multiple turns are carried over appropriately.</p>
+				<p>If you win against your opponent, you can switch ranking with them.
+				<br>Example: You (rank 1000) win against your opponent (rank 500).
+				<br>=> You (rank 500) / opponent (rank 1000).</p>
+				<p>&#8251; If you win against an opponent with a lower rank than you, the rankings will not change.
+				<br>&#8251; When switching to the VS Player main screen, your new rank will be updated and you can face a new set of players.</p>
+				<p>There is a 9 minutes 20 seconds timer (5 minute for single Keyblade weeks), where if time runs out, it will be treated as a defeat.
+				<br>&#8251; In this case, no changes will be made to the rankings.</p>
+				<p style="font-weight: bold">Other Rules</p>
+				<p>You and your opponent are considered "no attribute" so you are not weak to any attribute.
+				<br>&#8251; Excludes abilities with "super effective damage".</p>
+				<p>Status effects work but the length differs from normal battle.</p>
+				<p>The opponent is treated as a ground enemy.</p>
+				<h4>Keyblade Equipment</h4>
+				<img src="https://cache.sqex-bridge.jp/img/osWgN1C4r">
+				<p>On the VS Player Keyblade preparation screen, the Keyblade order and decks can be changed.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oTmgNvWTe">
+				<ul>
+					<li>By dragging the Keyblade you can change the order you use them.</li>
+					<li>Unlike normal decks, medals cannot be placed in multiple decks.</li>
+					<li>Keyblade order and medal placement is key!</li>
+				</ul>
+				<h4>Point Rewards</h4>
+				<ul>
+					<li>You can earn points through battles for rewards.</li>
+					<li>Points can be obtained in draws (battle results, not banners) and defeats, but you get more for winning.</li>
+					<li>Points are reset when the ranking period ends.</li>
+				</ul>
+				<h4>Other</h4>
+				<p>Changed some daily Missions to VS Player.
+				<br>&#8251; Conditions will not be met if you retire in the middle of a VS Players match.</p>
+				<h4>Tips</h4>
+				<p style="font-size: 12px">Notice [<a href="http://api.sp.kingdomhearts.jp/information/detail/52800" target="_blank">x</a>]</p>
+				<p>1. Prevent the opponent's attacks with <span style="font-weight: bold">Abnormal Status Skills</span></p>
+				<ul>
+					<li>By inflicting sleep or paralyze on your opponent, it can cause them to skip their first few medals. Since the first medals are typically buff or debuff medals, this can greatly reduce their damage.</li>
+					<li>Beware of the pet's one use skill "Esuna" that can heal the opponent's abnormal status. Make sure to equip abnormal status skills on multiple Keyblades.</li>
+					<li style="list-style-type: none">&#8251; The pet skill "Paralyze Up" can help turn the tide in your favour.</li>
+					<li style="list-style-type: none">&#8251; If you inflict Sleep on your opponent, attacking them after will wake them up.</li>
+				</ul>
+				<p>2. Reduce the opponent's damage with <span style="font-weight: bold">Guard Up Skills</span></p>
+				<ul>
+					<li>A simple way to decrease your opponent's damage is to equip Guard Up skills to your medals.</li>
+					<li>Bring Guard Up 100% skills to ensure safety. If it's not a 100% skill, equip accessories with Skill Luck.</li>
+					<li style="list-style-type: none">&#8251; Note that the ability "Guard Break", that will be discussed later, can make the skills ineffective.</li>
+				</ul>
+				<p>3. Activate <span style="font-weight: bold">Super Burst</span> effectively</p>
+				<ul>
+					<li>Using Super Bursts that increase Guilt will help increase damage significantly.</li>
+					<li>Since the Guilt increase does not stack, use the highest one first then fire off the rest.</li>
+					<li style="list-style-type: none">&#8251; If Auto is on, Super Bursts will not automatically activate.</li>
+				</ul>
+				<p>4. Destroy the opponent's defences with <span style="font-weight: bold">Guard Up Break</span></p>
+				<ul>
+					<li>Guard Break is an ability that has a chance for each hit to break the opponent's Guard Up skill. Breaking the Guard Up skill will make it ineffective for that hit.</li>
+					<li>Because it's an ability (and not a skill), copying it with Copy medals will also trigger it. Even if the Copy medal has a low Guilt value, it can still do a ton of damage.</li>
+				</ul>
+				<p>5. Set up <span style="font-weight: bold">Defence Decks</span> to maintain your ranking</p>
+				<ul>
+					<li>When someone chooses to attack you, the person who goes first is switched, so take this into consideration when creating your decks. If you want to skip your opponent's attacks, equip abnormal status skills to your first Keyblade.</li>
+				</ul>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-10" class="read-more-trigger">Super Burst, Dual Meow Wow</label>
+			<input type="checkbox" class="read-more-state" id="post-10" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">[Super Burst] Added: September 24, 2018 [<a href="http://cache.sqex-bridge.jp/guest/information/44635" target="_blank">x</a>]
+				<br>[Dual Meow Wow] Added: January 25, 2019 [<a href="http://cache.sqex-bridge.jp/guest/information/49523" target="_blank">x</a>]</p>
+				<h4>Super Burst</h4>
+				<p>Super Burst can be activated any time during your turn and only be used once per quest. However, you must have that medal equipped to use it.</p>
+				<p>&#8251; If you equip multiple medals with Super Burst, you can use them all (even if it's the same medal name).</p>
+				<img src="https://cache.sqex-bridge.jp/img/oCKONvYZm">
+				<p>The damage of Super Burst grows stronger according to the power of the medal with that particular Super Burst.</p>
+				<p>&#8251; Slot multiplier and buffs are applied to its damage. Guilt percentage and skills do not affect it.</p>
+				<p>In VS Player (PVP), activation during defence battles (when someone challenges you) varies depending on the medal. This is noted in the medal detail screen under Awakenings.</p>
+				
+				<h4>Platinum Tickets &#38; Dual Meow Wow</h4>
+				<img src="https://cache.sqex-bridge.jp/img/9oHsNWIIW">
+				<p>Get five [Guilt 7 - 9] Meow Wow SP &#38; NM medals from this banner.</p>
+				<h4>SB Evolution &#38; Enhancement</h4>
+				<p>Certain medals can be "evolved" to either add a Super Burst effect or increase its effect using the new medal.</p>
+				<p>Target SB medals will be evolved to SB+, while target medals will have an SB effect unlocked.</p>
+				<p>SB medals will be reset to level 1 (but not its stats) so they can be powered up even farther. With this, Chips and Dales can increase the extra strength and defence to +3000.</p>
+				<p>&#8251; To evolve the medal, the 5 Meow Wow medals must match its Guilt tier.
+				<br>&#8251; Only medals with SB already attached can be evolved to SB+.</p>
+				<p>&#8251; Targeted medals are indicated in the medal notice.
+				<br>&#8251; SB medals that are evolved will have their strength and defence in yellow font. To distinguish the difference from Status Bonus medals, the Cost stat for Status Bonus medals will also be in yellow font.</p>
+				<p>&#8251; Platinum tickets are mainly from PVP.
+				<br>&#8251; Meow Wow SP &#38; NM medals may be available from elsewhere including PVE Coliseum.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-11" class="read-more-trigger">High Score Events</label>
+			<input type="checkbox" class="read-more-state" id="post-11" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<h4>Event Details</h4>
+				<ul>
+					<li>Score can be increased by <span style="font-weight: bold">attacking and defeating enemies</span>. The final score is determined when the target enemy is destroyed or when its HP is depleted.</li>
+					<li><span style="font-weight: bold">Continues cannot be used</span>, so when your HP reaches 0, the quest is over.</li>
+					<li>Score gained is increased with an enemy's level and strength. So even when against the same enemy, <span style="font-weight: bold">the more damage dealt</span>, the more points you get.</li>
+				</ul>
+				<h4>Incorporating Bonus Medals into Decks</h4>
+				<ul>
+					<li>When a Bonus Medal is equipped to the deck, <span style="font-weight: bold">the score bonus is added when you attack and defeat the enemy</span>.
+				<br>You can check the Bonus Medals in the event.</li>
+				</ul>
+				<p>&#8251; You can check the Bonus Medals in the event.</p>
+				<h4>Aiming for High Damage</h4>
+				<ul>
+					<li><span style="font-weight: bold">The higher the damage when destroying</span> the enemy, the score added is increased.</li>
+					<li>When fighting enemies, use abilities with <span style="font-weight: bold">high damage and a low hit count</span>.</li>
+				</ul>
+				<h4>Let's get a damage bonus with strong abilities!</h4>
+				<ul>
+					<li>When attacking an enemy with high power, a <span style="font-weight: bold">"Damage Bonus"</span> is gained by defeating an enemy, the score is increased by up to 40&#37;.
+				<br>The value is calculated depending on the strongest attack used at the time.</li>
+				</ul>
+				<ul>
+					<li>"Damage Bonus" is <span style="font-weight: bold">based on the strongest attack</span> until the enemy is defeated. The greater the power, the higher the increase.
+					<br>The number of times the strongest attack is used is not calculated, so the Damage Bonus is not increased even if that attack is used multiple times against the same enemy.
+					<br>So use <span style="font-weight: bold">strong abilities against as many enemies as you can</span>.</li>
+				</ul>
+				<ul>
+					<li>The strongest attack is determined by the following rules:</li>
+				</ul>
+				<ul>
+					<li style="list-style-type: none"><span style="font-weight: bold">Calculating the Damage Bonus, as the enemy’s defence has a fixed value</span></li>
+					<li style="list-style-type: none">...When abilities are used against enemies with high defence and level, the Damage Bonus is not lowered unlike other enemies.
+					<br>As high level enemies already have a high amount of score, you can expect a large Damage Bonus.
+					<br>So use abilities often.</li>
+					<li style="list-style-type: none"><span style="font-weight: bold">Medal strength, Keyblade multiplier, buffs, and skills all increase the Damage Bonus</span></li>
+					<li style="list-style-type: none">...A higher Damage Bonus can be achieved by overlapping attacks for medals with high strength, abilities with a high multiplier, buff effects, and skill triggers.</li>
+				</ul>
+				<p>&#8251; Note that using a "Skip Ticket" will not give a score.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-12" class="read-more-trigger">Party Guide</label>
+			<input type="checkbox" class="read-more-state" id="post-12" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p>By opening the party menu, you are presented a screen with three options:</p>
+				<img src="https://66.media.tumblr.com/4e1111b05fdd2f7f62f49c09cbd66fb7/tumblr_inline_p0s9jv0IGR1ryw7t7_500.png">
+				<ul>
+					<li>「パーティー作成」 "party creation"</li>
+					<li>「パーティー加入」 "join party"</li>
+					<li>「管理」 "management"</li>
+				</ul>
+				<h4>Creating a Party</h4>
+				<p>An additional screen will appear where you will input your party options (they can be changed any time).</p>
+				<img src="https://66.media.tumblr.com/00158d60a99b79a1896e9f84d18c48c6/tumblr_inline_p0s9qtO6PS1ryw7t7_500.png">
+				<ul>
+					<li>Party name (max 14 characters)</li>
+					<li>Play style: hardcore, normal, casual</li>
+					<li>Approval method: auto-approval, manual approval, unable to join</li>
+					<li>PR message (max 20 characters)</li>
+				</ul>
+				<h4>Party Screen</h4>
+				<p>As a party leader or admin, you have several buttons to choose from to expand and manage your party:</p>
+				<img src="https://66.media.tumblr.com/072e41002d30aded91220eed98886e95/tumblr_inline_p0scbalZWM1ryw7t7_500.png">
+				<ul>
+					<li>「パーティー編集」 "party settings"</li>
+					<ul>
+						<li style="list-style-type: none">Edit the party name and other things that were set at the party’s creation. See the Creating a Party section.</li>
+					</ul>
+					<li>「メンバー勧誘」 “member recruitment”</li>
+					<ul>
+						<li style="list-style-type: none">See the Inviting Members section.</li>
+					</ul>
+					<li>「管理」 “management”</li>
+					<ul>
+						<li style="list-style-type: none">See the Management section.</li>
+					</ul>
+					<li>「ランキング」 “ranking”</li>
+					<ul>
+						<li style="list-style-type: none">Leads you to party rankings.</li>
+					</ul>
+					<li>「パーティー検索」 “party search”</li>
+					<ul>
+						<li style="list-style-type: none">See the Joining a Party section.</li>
+					</ul>
+				</ul>
+				<p>As a regular member, you are missing the first two buttons.</p>
+				<h4>Joining a Party</h4>
+				<p>There are several filter options to help you find a party that suits your needs.</p>
+				<img src="https://66.media.tumblr.com/8fb2665c920079137fd36880a77a07dc/tumblr_inline_p0sa69QTB61ryw7t7_500.png">
+				<ul>
+					<li>「プレイ頻度」 "play style"</li>
+					<li>「パーティーランク」 "party rank"</li>
+					<li>「ダイヤ」 "diamond"</li>
+					<li>「プラチナ」 "platinum"</li>
+					<li>「ゴルド」 "gold"</li>
+					<li>「シルバー」 "silver"</li>
+					<li>「ブロンズ」 "bronze"</li>
+					<li>「承認方法」 "approval method"</li>
+					<li>「メンバー数」 "number of members"</li>
+					<li>「検索」 "search"</li>
+					<li>「確認」 "confirm"</li>
+				</ul>
+				<p>Note that you must fulfill the following requirements:</p>
+				<ul>
+					<li>You must be in the same Union as the party you are attempting to join.</li>
+					<li>There must be less than 30 members in the party.</li>
+					<li>The party must not have their approval method be either auto approval, or manual approval.</li>
+					<li>You can not send out more than 5 party invites at once.</li>
+				</ul>
+				<h4>Accepting a Party Invite</h4>
+				<p>Once an invite has been sent to you, go to the party menu, then 「管理」 "management", and finally, 「勧誘申請承認」 "invites sent to you". You will have two options, 「承認する」 "accept" or 「削除する」 "decline".</p>
+				<h4>Management</h4>
+				<p>Here you can check for join requests that have been sent out or to you.</p>
+				<p>There are only two tabs for those without a party:</p>
+				<ul>
+					<li>「加入申請」 "join requests sent out"</li>
+					<li>「勧誘申請承認」 "invites sent to you"</li>
+				</ul>
+				<p>While in a party, you have three tabs:</p>
+				<ul>
+					<li>「勧誘申請」 "invites sent out"</li>
+					<li>「加入申請承認」 "join requests sent to you"</li>
+					<li>「勧誘申請承認」 "invites sent to you"</li>
+				</ul>
+				<p>And one last option:</li>
+				<ul>
+					<li>「脱退」 "leave (the party)"</li>
+				</ul>
+				<p>Note: A max of 30 invites can be sent at once. After 72 hours, invite requests will be deleted automatically.</p>
+				<h4>Inviting Members</h4>
+				<p>More filter options:</p>
+				<ul>
+					<li>「ルクスレベル」 "Lux level" (player level)</li>
+					<li>「プレイ頻度」 "play style"</li>
+					<li>「プレイ時間帯」 "play time" (JST)</li>
+					<li>「獲得LUXランキング」 "previous week's Lux ranking"</li>
+				</ul>
+				<p>Buttons:</p>
+				<ul>
+					<li>「ID検索」 "ID search" (add a player by their ID)</li>
+					<li>「検索」 "search" (using the filters)</li>
+					<li>「勧誘する」 "invite"</li>
+				</ul>
+				<p>Opening the player's profile will show their info as well as a red button to send an invite request to them. By doing so, you can choose to include a message (max 20 characters).</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-13" class="read-more-trigger">Data Backup</label>
+			<input type="checkbox" class="read-more-state" id="post-13" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p>First off, go to the Menu and choose the last option, その他.</p>
+				<p>Next, on the centre row, choose 引き継ぎ. Press OK.</p>
+				<img src="https://66.media.tumblr.com/a740d9aa343abf9b15bea71a17c21509/tumblr_inline_owym97ffUO1ryw7t7_500.png">
+				<p>The first button is the Terms and Conditions.</p>
+				<img src="https://66.media.tumblr.com/b8788a0d2e0d1c941561e8692460635d/tumblr_inline_owym9w9rkO1ryw7t7_500.png">
+				<p>The check boxes indicate what services can send you emails. (I have both checked, and emails are quite rare.) Choose whichever, if any, then tap the button below.</p>
+				<img src="https://66.media.tumblr.com/0bc99b3ddab4bb26b6625f01eabc3a15/tumblr_inline_owymatylIz1ryw7t7_500.png">
+				<p>Now you will get to choose between Twitter and Square Enix Account (does not need to be JP).</p>
+				<p>Note that it does state that some in-game currency (Jewels in this case) may not be carried over when switching devices depending on the OS/device. (I have not heard of anyone having problems with this. I've also transferred between Android and iOS myself. Nothing went missing.)</p>
+				<p>Once you choose between the two options, you will be sent to the appropriate page to log in. Once log in is successful, a final screen will appear and state that registration is complete:</p>
+				<img src="https://66.media.tumblr.com/0bee2994ef25a12472d0bf284e834d34/tumblr_inline_owymbtj4HD1ryw7t7_500.png">
+				<p>Press the 戻る button to return to the game.</p>
+				<p>To check if your account is connected, go back to the transfer screen (Menu -> その他 -> 引き継ぎ). The service account you connected to will be indicated in a light grey box below Japanese text.</p>
+				<h4>Switching Accounts</h4>
+				<p>Only Square Enix accounts and Twitter are options.</p>
+				<ol>
+					<li>[MENU] -> [その他] -> 「引き継ぎ」 -> [OK]</li>
+					<li>「アカウント変更」</li>
+					<li>[Twitter] or [Square Enix Account]</li>
+					<li>Login to that account.</li>
+					<li>Authorize (not sure if the SE account requires it, but Twitter does).</li>
+					<li>Enter your email address to be sent a confirmation email.</li>
+					<li>Open the email you have received (should be in your email within a few minutes) and click the link to verify.</li>
+					<li>If you want to check that it worked, go through step 1 again. The screen should say either Twitter or Square Enix Account under some Japanese text.</li>
+				</ol>
+				<h4>If you want to log in to a previously backed up account on another device, follow these instructions:</h4>
+				<p>Once you have installed the game, and gotten past the main screen, two buttons will pop up. Press the right button to accept the terms. The next screen displays two new buttons. Left is to transfer data to this device, while the right is to start anew.</p>
+				<p>The game will ask you to log in to the service that you have your data attached with.</p>
+				<p>Once login is authorized, another window will open to confirm your jewels. Press the right button. Close this final window, and the game will return you to the main screen. Move on in, and the game will download.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-14" class="read-more-trigger">Twitter Share</label>
+			<input type="checkbox" class="read-more-state" id="post-14" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 2.1.0 [<a href="http://cache.sqex-bridge.jp/guest/information/29421" target="_blank">x</a>]</p>
+				<p>You can login to Twitter on the Home screen.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oShjNdDxh">
+				<p>When KHUx and Twitter are linked, your mutual followers that are also linked will be shown.</p>
+				<img src="https://cache.sqex-bridge.jp/img/oShvN5iYm">
+				<p>Post your draw results and avatars profiles to Twitter!</p>
+				<img src="https://cache.sqex-bridge.jp/img/oShiNlrOA">
+				<hr style="height:1px">
+				<p>When you first tap the Twitter option, your browser (or Twitter app? I can’t recall) will pop up asking you to allow KHUx to do a few things, like tweeting.</p>
+				<p>Once you accept that, an in-game window will appear:</p>
+				<img src="https://66.media.tumblr.com/fbd0befd7f6a51fc1ce2a70808a89cbf/tumblr_inline_os1eo9B3Lv1ryw7t7_500.png">
+				<p>This will allow your Twitter avatar to appear by your character on the Home screen and character profile.</p>
+				<p>Once you’ve tapped [OK], the game will reload. You can now see your own (if you chose so) and party member’s Twitter avatars.</p>
+				<h4>Profile Sharing</h4>
+				<p>When you open your profile, there will be an orange [Tweet] button on the bottom of the window. Tap it and another window will pop up:</p>
+				<img src="https://66.media.tumblr.com/d71efea4b79f9c789669ee02d1a889cb/tumblr_inline_orvy7ttX4r1ryw7t7_500.png">
+				<p>The comment is for whatever text you like.</p>
+				<h4>Draw Sharing</h4>
+				<p>Press the button on the bottom corner of the draw screen to post it to your Twitter.</p>
+				<hr style="height:1px">
+				<p>Note: To change the option of displaying your Twitter avatar, go to [Menu] -> [Other] (last option) -> [Twitter]. Once you press the option, tap the “x” to save the change.
+				<br><span style="color: red">WARNING: The red button logs you out of Twitter.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-15" class="read-more-trigger">Medal Sorting/Filters</label>
+			<input type="checkbox" class="read-more-state" id="post-15" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<br>
+				<img src="https://66.media.tumblr.com/b60fb3fb51f360b8e01fbd695f1ebcdb/tumblr_inline_p9cyufyx0l1ryw7t7_500.png">
+				<p>Skill: order depends on one of the original filter's skill order. The newer skills, like the combination skills, are in some random order. For example, "Lux &#38; Atk Up L" is before "Lux &#38; Atk Up M 100%". (Might be introduction order.)</p>
+				<p>Ability enhancement: order doesn’t change depending on ascending or descending (PSM, actually). It just shows you the medal's ability upgrades and guilt.</p>
+				<img src="https://66.media.tumblr.com/1fc397479bea3c55cca1f5580cbb5bc3/tumblr_inline_p9cyvkqdhk1ryw7t7_500.png">
+				<ul>
+					<li>Equippable = medals that can be equipped to your deck (includes Awakening Medals)</li>
+					<li>EXP = EXP fodder (Huey, Dewey, Louie, H&#38;D&#38;L, Scrooge)</li>
+					<li>Boost = boosters (Chip, Dale, Magic Mirror, Mickey &#38; Broom Servant</li>
+					<li>Cost = Cid</li>
+					<li>Evolution = rarity increase materials (three fairies, Yen Sid, Broom Servant, etc.)</li>
+					<li>Munny = Munny/Jewel fodder (Moogle)</li>
+				</ul>
+				<img src="https://66.media.tumblr.com/e766eadb2af50a34d443717e4932afcb/tumblr_inline_p9cyxuwuZv1ryw7t7_500.png">
+				<p>Favourite = locked medals</p>
+				<img src="https://66.media.tumblr.com/ee7f91881d2e9b96bd2b57c9ce017a9e/tumblr_inline_p9cyz6oYW51ryw7t7_500.png">
+				<img src="https://66.media.tumblr.com/16ea42a38ab232d7048430528124a565/tumblr_inline_p9cz09LQxC1ryw7t7_500.png">
+				<ul>
+					<li>Recovery = HP healer, ability gauge refill</li>
+					<li>Special = set damage, reset, copy, duplicate</li>
+					<li>Power up = abilities where their multiplier depends on a factor (HP, Lux, medal slot, etc.)</li>
+					<li>Attack only = just deals damage</li>
+				</ul>
+				<img src="https://66.media.tumblr.com/79aad9f8e8d62ecf3bb47f50a139dac8/tumblr_inline_p9cz18iy6Q1ryw7t7_500.png">
+				<ul>
+					<li>Attack Up</li>
+					<li>Attack Up Whole</li>
+					<li>Guard Up</li>
+					<li>Ability Prize Up</li>
+					<li>Lux Up</li>
+					<li>Abnormal status</li>
+					<li>Second Chance</li>
+					<li>Ability</li>
+				</ul>
+				<p>Note: Combination skills will be in all appropriate categories.</p>
+				<img src="https://66.media.tumblr.com/2e161db6f79c5b5b49623a252ecbeb1d/tumblr_inline_p9cz2ixZva1ryw7t7_500.png">
+				<ul>
+					<li>Max Ability Gauge +2</li>
+					<li>Max HP +800</li>
+					<li>Ground enemy defence -60&#37;</li>
+					<li>Aerial enemy defence -60&#37;</li>
+					<li>Raid Boss battle damage +40&#37;</li>
+					<li>Additional attack power +40&#37;</li>
+					<li>Offence power +1000</li>
+					<li>Defence power +2000</li>
+					<li>Poison resistance 20&#37;</li>
+					<li>Paralysis resistance 20&#37;</li>
+					<li>Sleep resistance 20&#37;</li>
+				</ul>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-16" class="read-more-trigger">Training Mode</label>
+			<input type="checkbox" class="read-more-state" id="post-16" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">[<a href="http://cache.sqex-bridge.jp/guest/information/44089" target="_blank">x</a>]</p>
+				<img src="https://cache.sqex-bridge.jp/img/oJskNQMGG">
+				<p>These 12 quests will always cost 0 AP, where you can try out your decks.</p>
+				<p>There are different enemies depending on the type of enemy you want to face.</p>
+				<h4>Quest Info</h4>
+				<ul>
+					<li><span style="color: #CD002B">Standalone P Attribute Ground</span></li>
+					<ul>
+						<li>One enemy</li>
+						<li>Power attribute</li>
+						<li>Ground</li>
+					</ul>
+					<li><span style="color: #00CD13">Standalone S Attribute Ground</span></li>
+					<ul>
+						<li>One enemy</li>
+						<li>Speed attribute</li>
+						<li>Ground</li>
+					</ul>
+					<li><span style="color: #0082CD">Standalone M Attribute Ground</span></li>
+					<ul>
+						<li>One enemy</li>
+						<li>Magic attribute</li>
+						<li>Ground</li>
+					</ul>
+					<li><span style="color: #CD002B">Standalone P Attribute Aerial</span></li>
+					<ul>
+						<li>One enemy</li>
+						<li>Power attribute</li>
+						<li>Aerial</li>
+					</ul>
+					<li><span style="color: #00CD13">Standalone S Attribute Aerial</span></li>
+					<ul>
+						<li>One enemy</li>
+						<li>Speed attribute</li>
+						<li>Aerial</li>
+					</ul>
+					<li><span style="color: #0082CD">Standalone M Attribute Aerial</span></li>
+					<ul>
+						<li>One enemy</li>
+						<li>Magic attribute</li>
+						<li>Aerial</li>
+					</ul>
+					<li><span style="color: #CD002B">Group P Attribute Ground</span></li>
+					<ul>
+						<li>Three enemies</li>
+						<li>Power attribute</li>
+						<li>Ground</li>
+					</ul>
+					<li><span style="color: #00CD13">Group S Attribute Ground</span></li>
+					<ul>
+						<li>Three enemies</li>
+						<li>Speed attribute</li>
+						<li>Ground</li>
+					</ul>
+					<li><span style="color: #0082CD">Group M Attribute Ground</span></li>
+					<ul>
+						<li>Three enemies</li>
+						<li>Magic attribute</li>
+						<li>Ground</li>
+					</ul>
+					<li><span style="color: #CD002B">Group P Attribute Aerial</span></li>
+					<ul>
+						<li>Three enemies</li>
+						<li>Power attribute</li>
+						<li>Aerial</li>
+					</ul>
+					<li><span style="color: #00CD13">Group S Attribute Aerial</span></li>
+					<ul>
+						<li>Three enemies</li>
+						<li>Speed attribute</li>
+						<li>Aerial</li>
+					</ul>
+					<li><span style="color: #0082CD">Group M Attribute Aerial</span></li>
+					<ul>
+						<li>Three enemies</li>
+						<li>Magic attribute</li>
+						<li>Aerial</li>
+					</ul>
+				</ul>
+				<h4>Notes</h4>
+				<ul>
+					<li style="list-style-type: none">&#8251; To ground enemies, the Awakening Ability "Ground Enemy Defence -60&#37;" is applied.
+					<li style="list-style-type: none">&#8251; To aerial enemies, the Awakening Ability "Aerial Enemy Defence -60&#37;" is applied.</li>
+				</ul>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-17" class="read-more-trigger">Spirit Training</label>
+			<input type="checkbox" class="read-more-state" id="post-17" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 3.2.0 [<a href="http://api.sp.kingdomhearts.jp/information/detail/51915" target="_blank">x</a>]</p>
+				<p>Spirit Training can be accessed through the Spirit menu.</p>
+				<p>By training with your Spirit, you can get a Special Awakening Ability.
+				<br>&#8251; Special Awakening Abilities are different from normal Awakening Abilities.</p>
+				<p>If you want to train more than one medal at a time, there are "special" conditions:</p>
+				<table>
+					<tr id="main">
+					<th>Condition</th>
+					<th>Duration</th>
+					</tr>
+					<tr>
+					<td>Purchase Jewel Pack S</td>
+					<td>Available until that Sunday, 23:59 JST.</td>
+					</tr>
+					<tr>
+					<td>Purchase Jewel Pack F</td>
+					<td>Last day of the purchase month, 23:59 JST.</td>
+					</tr>
+					<tr>
+					<td>Do a 10-pull on banners five (5) times*</td>
+					<td>72 hours starting after the 5th pull.</td>
+					</tr>
+				</table>
+				<ul>
+				<li style="list-style-type: none">&#8251; If the same condition is completed more than once, one slot is the max.</li>
+				<li style="list-style-type: none">* Must be done on a banner that lasts a limited amount of time. Ticket Draws also do not count.</li>
+				</ul>
+				<p>Trained Spirits can be trained again after 20 hours.
+				<br>You can use jewels to bypass the wait time.</p>
+				<p><span style="font-weight: bold">[Jewel requirements]</span>
+				<br>100 => 100 => 200 => 500 => 1000
+				<br>&#8251; The jewel count is reset every Sunday 23:59 JST.</p>
+				<h4>Special Awakening Abilities</h4>
+				<p>Special Awakening Abilities can also be rerolled.</p>
+				<table>
+					<tr id="main">
+					<th>Special Awakening Ability</th>
+					<th>Probability Rate</th>
+					</tr>
+					<tr>
+					<td>Additional Attack STR 120%</td>
+					<td>0.2%</td>
+					</tr>
+					<tr>
+					<td>Raid Boss Damage 100%</td>
+					<td>0.8%</td>
+					</tr>
+					<tr>
+					<td>Raid Boss Damage 30%</td>
+					<td>2.4%</td>
+					</tr>
+					<tr>
+					<td>Raid Boss Damage 20%</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Raid Boss Damage 10%</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Strength +2000</td>
+					<td>1.4%</td>
+					</tr>
+					<tr>
+					<td>Strength +500</td>
+					<td>2.0%</td>
+					</tr>
+					<tr>
+					<td>Strength +400</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Strength +200</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Strength +100</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Strength +50</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Defence +1000</td>
+					<td>2.0%</td>
+					</tr>
+					<tr>
+					<td>Defence +800</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Defence +600</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Defence +400</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Defence +200</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Ground Enemy Defence -20%</td>
+					<td>1.4%</td>
+					</tr>
+					<tr>
+					<td>Aerial Enemy Defence -20%</td>
+					<td>1.4%</td>
+					</tr>
+					<tr>
+					<td>Max Ability Gauge +3</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max Ability Gauge +2</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max Ability Gauge +1</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max HP +1000</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max HP +900</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max HP +800</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max HP +700</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max HP +600</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Max HP +500</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Poison Resist +100%</td>
+					<td>1.0%</td>
+					</tr>
+					<tr>
+					<td>Poison Resist +20%</td>
+					<td>2.8%</td>
+					</tr>
+					<tr>
+					<td>Poison Resist +10%</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Sleep Resist +100%</td>
+					<td>1.0%</td>
+					</tr>
+					<tr>
+					<td>Sleep Resist +20%</td>
+					<td>2.8%</td>
+					</tr>
+					<tr>
+					<td>Sleep Resist +10%</td>
+					<td>3.5%</td>
+					</tr>
+					<tr>
+					<td>Paralysis Resist +100%</td>
+					<td>1.0%</td>
+					</tr>
+					<tr>
+					<td>Paralysis Resist +20%</td>
+					<td>2.8%</td>
+					</tr>
+					<tr>
+					<td>Paralysis Resist +10%</td>
+					<td>3.5%</td>
+					</tr>
+				</table>
+				<p>&#8251; The following will not stack. Highest &#37; will be applied.</p>
+				<ul>
+				<li>Additional Attack Strength 120&#37;</li>
+				<li>Ground Enemy Defence -20&#37;</li>
+				<li>Aerial Enemy Defence -20&#37;</li>
+				</ul>
+				<p>Example 1:
+				<br>Normal Awakening "Additional Attack Strength +40&#37;"
+				<br>Special Awakening "Additional Attack Strength <span style="font-weight: bold">+120&#37;</span>"
+				<br>If both equipped, only the Special Awakening will be applied.</p>
+				<p>Example 2:
+				<br>Normal Awakening "Ground Enemy Defence <span style="font-weight: bold">-60&#37;</span>"
+				<br>Special Awakening "Ground Enemy Defence -20&#37;"
+				<br>If both equipped, only the normal Awakening will be applied.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-18" class="read-more-trigger">Passives</label>
+			<input type="checkbox" class="read-more-state" id="post-18" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 3.4.0 [<a href="http://api.sp.kingdomhearts.jp/information/detail/57278" target="_blank">x</a>]</p>
+				<p>Certain passive "buffs" will be applied to yourself depending on your Lux level or Keyblade level.</p>
+				<p>Based off Lux level:</p>
+				<ul>
+					<li>From level 350, stats (strength, defence, HP, ability gauges) are affected.</li>
+					<li>By level 800, strength +3000 (applies to all medals), defence +3000, HP +5000, AG +3 (all Keyblades).</li>
+					<li>Passives are added or upgraded every 5 levels from level 350 - 450, every 2 levels from level 450 - 550, and every 1 level from 550+.</li>
+				</ul>
+				<p>Based off Keyblade level:</p>
+				<ul>
+					<li>From [Keyblade] +35, passives affect the strength of Upright/Power, Upright/Speed, Upright/Magic, Reverse/Power, Reverse/Speed, Reverse/Magic, Power, Speed, Magic, Upright, and Reverse.</li>
+					<li>The passive will only affect the specific medal attribute that matches.</li>
+					<li>Examples:</li>
+					<ul>
+						<li>Upright/Power medal strength +50 => Upright/Power medals</li>
+						<li>Power medal strength +100 => ignores Upright or Reverse; Power medals</li>
+					</ul>
+				</ul>
+				<p>Passives can be checked in the 「パッシブ効果」 "Passive Effect" button on your avatar profile.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-19" class="read-more-trigger">VIP Boards</label>
+			<input type="checkbox" class="read-more-state" id="post-19" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: November 11, 2016 [<a href="http://cache.sqex-bridge.jp/guest/information/22688" target="_blank">x</a>]</p>
+				<p>A new type of avatar board, VIP boards are now available through Menu > Avatar Board.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o3y4NcVaH">
+				<p>VIP boards contain avatar parts and other valuables that can only be obtained by using VIP coins.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o3yMNrDfa">
+				<p>VIP coins are available through certain draws, typically 10-medal Premium Draws. You can check if the coins are available through the in-game draw notice.</p>
+				<img src="https://cache.sqex-bridge.jp/img/o3yEN7a4YH">
+				<p>When you complete a board, a new board will become available. The boards are permanent, so take your time!</p>
+				<img src="https://cache.sqex-bridge.jp/img/o3ywN78Iev">
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-20" class="read-more-trigger">101 Dalmatians</label>
+			<input type="checkbox" class="read-more-state" id="post-20" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: January 12, 2017 [<a href="http://cache.sqex-bridge.jp/guest/information/24700" target="_blank">x</a>]</p>
+				<p>Get medals "Puppy No. 1-99", "Pongo", and "Perdita" from story quests. Defeating enemies and opening chests have a chance of dropping these adorable doggos.</p>
+				<p>By arranging the Puppy medals accordingly will be key to evolving them.</p>
+				<p>Example: "Puppy 1" to "Puppy 6" can evolve into "Puppies No. 1 - 6", and so on. Also works with the "Puppies No. # - #" medals, i.e., "Puppies No. 1 - 6" to "Puppies No. 31 - 36" can evolve into "Puppies No. 1 - 36".</p>
+				<img src="https://cache.sqex-bridge.jp/img/ofJBNSZCP">
+				<h4>Burst Level</h4>
+				<p>Ultimately, you can evolve them into "101 Dalmatians". When Guilted, your Burst Level will increase by the usual 1. When reaching max Guilt, your Burst Level will increase by 100, totaling to 101.</p>
+				<p>"Pongo" and "Perdita" can also increase the ability level of "101 Dalmatians".</p>
+				<img src="https://cache.sqex-bridge.jp/img/ofJvN75eGS">
+				<p>Note on Awakening Abilities: Unlike increasing the ability level of the 101 Dalmatians medal with Pongo and Perdita, the two will not reroll the Awakening Ability on 101 Dalmatians.</p>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-21" class="read-more-trigger">Offline Mode</label>
+			<input type="checkbox" class="read-more-state" id="post-21" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 4.4.0 [<a href="https://cache.sqex-bridge.jp/guest/information/73264" target="_blank">x</a>]</p>
+				<h4>Home Screen</h4>
+				<img src="https://cache.sqex-bridge.jp/img/a1e634a16895eca39a401d6a961546c7ba43fa79f5285c9b978129d30623db4b">
+				<h4>(1) Theatre</h4>
+				<p>You can view the entire story. You can change your avatar and watch the story with any Keyblade.</p>
+				<p>&#8251; The final episode will be available in the version 4.4.1 update.</p>
+				<img src="https://cache.sqex-bridge.jp/img/b8088cfc2b98a82cbbfb451f9ed8c5a8e38b3bf553f290700b1cf3aa8bb27f0d">
+				<h4>(2) Classic Kingdom</h4>
+				<p>These are a collection of minigames that can also be played in KHIII.</p>
+				<ul>
+					<li>GIANTLAND</li>
+					<li>THE MUSICAL FARMER</li>
+					<li>THE KARNIVAL KID</li>
+					<li>THE BARNYARD BATTLE</li>
+					<li>FISHIN' FRENZY</li>
+				</ul>
+				<img src="https://cache.sqex-bridge.jp/img/oCmbNkjj0">
+				<h4>(3) Battle Record</h4>
+				<p>Check your play records here.</p>
+				<img src="https://cache.sqex-bridge.jp/img/a15236afd7faa93dfe052f6a88eac04333f5af9e2ceb332a636cfa8119e051c8">
+				<h4>(4) Keyblade</h4>
+				<p>Keyblades from Ux are available. You can also choose the appearance stage.</p>
+				<img src="https://cache.sqex-bridge.jp/img/7086786bc5fd68c9688f3cb311c58ee37b321a3d2096d5a6966f40212e3b1dcd">
+				<h4>(5) Title, name, union, appearance</h4>
+				<p>You can freely change these options.</p>
+				<p>Most avatar parts are available. (KHInsider says Chi exclusives are not in.)</p>
+				<img src="https://cache.sqex-bridge.jp/img/948954228f92c01bbdae88645e766976f31228fa039b591f8668fc18ba61a9d4">
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+	</div>
+
+	<br>
+
+	<div id="footer">
+		<hr>
+		<p>
+			<a href="http://luxenvulpies.tumblr.com/" target="_blank">Tumblr</a> |
+			<a href="https://twitter.com/luxenvulpies" target="_blank">Twitter</a> |
+			<a href="https://www.youtube.com/channel/UChLBcZa_2Q5f6AeohaQlIEg/" target="_blank">YouTube</a>
+		</p>
+	</div>
+
+	<script>
+	function myFunction() {
+		var x = document.getElementById("myNavbar");
+		if (x.className === "navbar") {
+			x.className += " responsive";
+		} else {
+			x.className = "navbar";
+		}
+	}
+	</script>
+	
+</body>
+
+</html>

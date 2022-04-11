@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{Favicon}">
+
+	<title>KHUχDR Database: DR Play Guide</title>
+	
+	<style>
+	    html, body {
+            	margin: 0;
+                padding: 0;
+            }
+            body {
+                line-height: normal !important;
+            }
+            .navbar {
+                font-family: "Franklin Gothic Book", sans-serif;
+            	background-color: #fbfc99;
+            	position: fixed;
+            	top: 0;
+            	width: 100%;
+            	border-bottom: 1px solid black;
+            	z-index: 99;
+            }
+            .navbar a {
+            	font-size: 16px;
+            	float: left;
+            	display: block;
+            	color: black;
+            	text-align: center;
+            	padding: 10px 12px;
+            	text-decoration: none;
+            }
+            .navbar .active {
+            	background-color: #eeb4df;
+            }
+            .dropdown-content .active {
+            	background-color: #bbbbbb;
+            }
+            .navbar .icon {
+            	display: none;
+            }
+            .dropdown {
+            	float: left;
+            	overflow: hidden;
+            }
+            .dropdown .dropbtn {
+            	font-size: 16px;
+            	border: none;
+            	outline: none;
+            	color: black;
+            	padding: 10px 12px;
+            	background-color: inherit;
+            	font-family: inherit;
+            	margin: 0;
+            }
+            .dropdown-content {
+            	font-size: 0; /*removes empty space between columns*/
+            	display: none;
+            	position: absolute;
+            	background-color: #f9f9f9;
+            	min-width: 160px;
+            	-webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            	-moz-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            	z-index: 1;
+            	column-count: 2;
+				border-left: 1px solid black;
+				border-right: 1px solid black;
+				border-bottom: 1px solid black;
+            }
+            .dropdown-content a {
+            	font-size: 16px;
+            	float: none;
+            	color: black;
+            	padding: 8px 10px;
+            	text-decoration: none;
+            	display: block;
+            	text-align: left;
+            }
+            .navbar a:hover, .dropdown:hover, .dropbtn:hover {
+            	background-color: #ee76df;
+            	color: black;
+            }
+            .dropdown-content a:hover {
+            	background-color: #ddd;
+            	color: black;
+            }
+            .dropdown:hover .dropdown-content {
+            	display: block;
+            }
+            @media screen and (max-width: 600px) {
+            	.navbar a:not(:first-child), .dropdown .dropbtn {
+            	display: none;
+            	}
+            	.navbar a.icon {
+            	float: right;
+            	display: block;
+            	}
+            }
+            @media screen and (max-width: 600px) {
+            	.navbar.responsive {
+            		position: fixed;
+            	}
+            	.navbar.responsive a.icon {
+            		position: absolute;
+            		right: 0;
+            		top: 0;
+            	}
+            	.navbar.responsive a {
+            		float: none;
+            		display: block;
+            		text-align: left;
+            	}
+            	.navbar.responsive .dropdown {
+            		float: none;
+            	}
+            	.navbar.responsive .dropdown-content {
+            		position: relative;
+            	}
+            	.navbar.responsive .dropdown .dropbtn {
+            		display: block;
+            		width: 50%;
+            		text-align: left;
+            		box-sizing: border-box;
+            		display: flex;
+            		flex-wrap: wrap;
+            	}
+            }
+            
+            #myheader {
+            	background-image: url("https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/Results%20Background%20Full.png");
+            	background-color: #74b2ed;
+            	background-repeat: repeat;
+            	background-attachment: fixed;
+            	background-position: center;
+            	min-width: 100%;
+            }
+            #myheader h1 {
+            	text-align: center;
+            	text-shadow: 3px 3px 7px #000;
+            	color: white;
+            	font-family: "Open Sans", sans-serif;
+            	font-size: 3.3em;
+            	letter-spacing: .1em;
+            	margin-top: 5;
+            	padding-top: 42px;
+            	box-sizing: border-box;
+            	width: 100%;
+            	margin-bottom: 25px;
+            }
+            #myheader h2 {
+            	text-align: center;
+            	text-shadow: 3px 3px 7px #000;
+            	color: white;
+            	font-family: "Segoe UI", sans-serif;
+            	font-size: 1.6em;
+            	font-weight: 400;
+            	margin-bottom: 48px;
+            	box-sizing: border-box;
+            	width: 100%;
+            }
+            #myheader hr {
+            	color: #ddd;
+            	background-color: #000000;
+            	height: 1px;
+            	width: 100%;
+            	border: 0;
+            	overflow: visible;
+            }
+            #myheader a {
+            	color: #ffffff;
+            	text-decoration: none;
+            }
+            #myheader a:hover {
+            	color: #ee76df;
+            }
+            #myheader img {
+            	margin: auto;
+            	position: fixed;
+            	width: 100%;
+            }
+            
+            .main {
+                max-width: 80% !important;
+            }
+            
+            #content {
+            	margin-left: 2em;
+            	margin-right: 2em;
+            }
+            
+            #content .read-more-state {
+            	display: none;
+            }
+            #content .read-more-target {
+            	opacity: 0;
+            	max-height: 0;
+            	font-size: 0;
+            	display: none;
+            }
+            #content .read-more-state:checked ~ .read-more-wrap .read-more-target {
+            	opacity: 1;
+            	font-size: inherit;
+            	max-height: 999em;
+            	display: block;
+            }
+            #content .read-more-trigger {
+            	display: block;
+            	padding: 0 .5em;
+            	line-height: 2;
+            	font-size: 16px;
+            	font-family: "Roboto", sans-serif;
+            }
+            #content .read-more-trigger:hover {
+            	background-color: #ddd;
+            }
+            #content .info img {
+            	display: inline-block;
+            }
+            #content .info a {
+            	text-decoration: none;
+            }
+            
+            #content h3 {
+            	font-size: 150%;
+            	font-family: "Myriad Pro", sans-serif;
+            	text-align: center;
+            }
+            #content h4 {
+            	font-size: 100%;
+            	font-family: "Myriad Pro", sans-serif;
+            	padding: 0;
+            }
+            #content p, li {
+            	font-family: "Helvetica Neue", sans-serif;
+            	font-size: 14px;
+            }
+            #content table {
+				margin-right: auto;
+				margin-left: 0px
+			}
+            #content tr:nth-child(even) {
+            	background-color: #f2f2f2;
+            }
+            #content th {
+            	vertical-align: left;
+            	padding: 15px;
+            }
+            #content th, td {
+            	font-family: "Times New Roman", sans-serif;
+            	border-bottom: 1px solid #bbb;
+            }
+            #content td {
+            	padding-top: 5px;
+            	padding-bottom: 5px;
+            	padding-left: 10px;
+            	padding-right: 10px;
+            	text-align: center;
+            }
+            #content a {
+            	text-decoration: none;
+            	color: blue;
+            }
+            #content a:hover {
+            	color: #ee76df;
+            }
+            #content hr {
+            	color: #ddd;
+            	background-color: #ddd;
+            	height: 3px;
+            	width: 100%;
+            	border: 0;
+            }
+            
+            #buttons {
+				text-align: center;
+				margin: 20px;
+			}
+			#buttons button {
+				font-family: "Open Sans", sans-serif;
+				font-size: 14px;
+				background-color: #fbfc99;
+				border: 1px solid hsl(50, 50%, 70%);
+				border-radius: 1em;
+				box-shadow: 0px 5px 0px 0px hsl(50, 50%, 70%);
+				padding: 10px 20px;
+				margin: auto 5px;
+			}
+			#buttons button:hover {
+				background-color: #ee76df;
+				border: 1px solid hsl(320, 70%, 40%);
+				box-shadow: 0px 5px 0px 0px hsl(320, 70%, 40%);
+			}
+
+			#content #images {
+				z-index: -1;
+				-webkit-filter: drop-shadow(5px 5px 5px #222);
+				filter: drop-shadow(5px 5px 5px #222);
+			}
+            
+            #content img {
+            	margin: 0 auto;
+            	display: block;
+            	max-width: 100%;
+            }
+            
+            /* Tables */
+            #content table {
+            	margin: 0 auto;
+            	font-size: 16px;
+            }
+            #main {
+            	font-family: "Myriad Pro", sans-serif;
+            	background-color: black;
+            	color: white;
+            }
+            
+            #footer {
+            	text-align: center;
+            	margin: 0;
+            }
+            #footer hr {
+            	color: #ddd;
+            	background-color: #ddd;
+            	height: 1px;
+            	width: 100%;
+            	border: 0;
+            }
+            #footer p {
+            	font-family: "Segoe UI", sans-serif;
+            	font-size: 14px;
+            }
+            #footer a {
+            	color: #0037ff;
+            	text-decoration: none;
+            }
+            #footer a:hover {
+            	color: #ee76df;
+            }
+	</style>
+
+</head>
+
+<body>
+
+	<div id="header">
+		<h1><a href="dbindex">KHUχDR Database</a></h1>
+		<h2>Your one stop source of Japanese KHUχDR info!</h2>
+		<hr/>
+	</div>
+
+	<div class="navbar" id="myNavbar">
+		<a href="dbindex">Home</a>
+		<a href="about">About</a>
+		<div class="dropdown">
+			<button class="dropbtn">Medals
+				<i class="droptent"></i>
+			</button>
+				<div class="dropdown-content">
+					<a href="ux-medal-album">Album</a>
+					<a href="ux-compare">Comparisons</a>
+					<a href="https://docs.google.com/spreadsheets/d/12zeSoJKzJ5oQxJA3rKtzumFB16fUFwZ24JwQoExum3o/edit?usp=sharing" target="_blank" title="Redirects to spreadsheet.">Translation Tool</a>
+					<a href="ux-awakening">Awakenings</a>
+					<a href="ux-skills">Skills</a>
+				</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Keyblades
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="ux-keyblade">Information</a>
+				<a href="ux-subslots">Subslots</a>
+				<a href="ux-starlight">Starlight</a>
+				<a href="ux-rock-splendor">Rock Splendor</a>
+				<a href="ux-last-resort">Last Resort</a>
+				<a href="ux-desire-lamp">Desire Lamp</a>
+				<a href="ux-power-of-hero">Power of Hero</a>
+				<a href="ux-la-vie-en-rose">La Vie en Rose</a>
+				<a href="ux-moogle-of-glory">Moogle of Glory</a>
+				<a href="ux-sleeping-lion">Sleeping Lion</a>
+				<a href="ux-fantasy-notes">Fantasy Notes</a>
+				<a href="ux-crystal-works">Crystal Works</a>
+				<a href="ux-fenrir">Fenrir</a>
+				<a href="ux-dark-biter">Dark Biter</a>
+				<a href="ux-missing-ache">Missing Ache</a>
+				<a href="ux-fairy-star">Fairy Star</a>
+				<a href="ux-diamond-dust">Diamond Dust</a>
+				<a href="ux-bad-guy-breaker">Bad Guy Breaker</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Quest
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="ux-jewel">Jewels</a>
+				<a href="ux-standard">Standard</a>
+				<a href="ux-proud">Proud</a>
+				<a href="ux-challenges">Challenges</a>
+				<a href="ux-enemies">Enemies</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Miscellaneous
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="ux-dalmatians">101 Dalmatians</a>
+				<a href="ux-avatar-luck">Avatar Luck</a>
+				<a href="ux-passives">Passives</a>
+				<a href="ux-pet">Pets</a>
+				<a href="ux-play-guide">Play Guide</a>
+				<a href="ux-pvp">PVP</a>
+				<a href="ux-records">Records</a>
+				<a href="ux-titles">Titles</a>
+				<a href="ux-uc-phrases">UC Phrases</a>
+				<a href="ux-updates">Version Updates</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Dark Road
+				<i class="droptent"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="dr-card-album">Cards &#38; Enemies</a>
+				<a href="dr-levels">Levels</a>
+				<a href="dr-play-guide">Play Guide</a>
+				<a href="dr-updates">Version Updates</a>
+			</div>
+		</div>
+		<a href="links">Links</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+	<div id="content">
+		<h3>Play Guide</h3>
+		
+		<p style="font-style: italic">Includes information on how mechanics work, features, some event explanations, and some translated work. [Image heavy.]</p>
+		
+		<p>Click the label to view.</p>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-1" class="read-more-trigger">Game Basics</label>
+			<input type="checkbox" class="read-more-state" id="post-1" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p>[<a href="http://api.sp.kingdomhearts.jp/dark/information/detail/66355" target="_blank">JPN</a>] [<a href="http://api.sp.kingdomhearts.com/dark/information/detail/66356" target="_blank">ENG</a>]</p>
+				<h4>Battle</h4>
+				<img src="https://cache.sqex-bridge.jp/img/9ebSNTsPv">
+				<img src="https://cache.sqex-bridge.jp/img/9ebKN70kgY">
+				<img src="https://cache.sqex-bridge.jp/img/9ebuNhrrJ">
+				<p style="font-size: 12px">&#8251; If you die during battle, you can resurrect by consuming charms 「おまもり」. Some quests will not allow you to use them.</p>
+				<h4>Main Quest / Main Mission</h4>
+				<p>Continuing the main quest (story), tap the button in the top right of the Home screen, below the Menu button. However, if there are main missions to complete, it will replace that button. Once you complete those missions, the quest will open up again.</p>
+				<p style="font-size: 12px">&#8251; Theater mode will be available in future updates.
+				<br>&#8251; Currently, up to quest 20 is available. Story scenes occur at quests 7, 10, 14, and 20.</p>
+				<h4>Free Battle</h4>
+				<p>This is an endless mode where enemies will continue to appear. Use it to obtain BP, fill the card album, and complete missions. Difficulty will be increased as story progresses.</p>
+				<p style="font-size: 12px">&#8251; Max BP for one free battle is 999 999 999.
+				<br>&#8251; When the date switches at 04:00 the following day, you will be automatically kicked to the home screen.
+				<br>&#8251; You can quit Free Battle by tapping the button in the top left of the screen. Despite quitting part way, you will still receive the accumulated BP and enemy count.</p>
+				<h4>Cards</h4>
+				<p>Cards can be obtained via jewel or ticket draws.</p>
+				<p>There are 6 "colours” available: Light red, light green, light blue, dark red, dark green, and dark blue. Up to 5 cards of each colour (total 30) can be included in your card deck.</p>
+				<p>The same cards can not be kept separate. When you obtain a multiple of one card, they will be automatically combined and the strength of it will be increased.</p>
+				<p style="font-size: 12px">&#8251; Some cards will not have their valued increased. For these, the passive + value will be higher than others.</p>
+				<p>The max number of cards that can be combined is 10 and anything above can be converted to either BP or SP (shop points).</p>
+				<p style="font-size: 12px">&#8251; In the options menu, you can decide to have the game automatically choose either BP or SP if you so desire. The amount of points is dependent on the card.
+				<br>&#8251; For cards that don’t combine normally, the amount of points converted will be increased compared to normal cards.</p>
+				<h4>Level Up</h4>
+				<p>From the status screen (bottom left button at Home), leveling up Xehanort requires the use of BP.</p>
+				<img src="https://cache.sqex-bridge.jp/img/9ehwN7anpL">
+				<h4>Getting BP</h4>
+				<p>As BP can be obtained via battles and missions, it will also accumulate as time passes. This BP can be obtained by pressing the BP icon at the top of the Home screen. This BP can reach 50 000 before it must be claimed.</p>
+				<img src="https://cache.sqex-bridge.jp/img/9ehMN7FDbj">
+				<h4>Important Notes</h4>
+				<p>Closing (and reopening) the app while playing:</p>
+				<ul>
+					<li>Events: It will restart from the beginning and will consume revive charms if any were used.</li>
+					<li>Main quest: You will return to the Home screen  and will consume revive charms if any were used.</li>
+					<li>Free battle: You will return to the Home screen, keep the earned BP, but lose revive charms if used.</li>
+				</ul>
+				<p>Updates while playing:</p>
+				<ul>
+					<li>Events: Same as if you closed and reopened the app.</li>
+					<li>Free battle:  Same as if you closed and reopened the app.</li>
+				</ul>
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+		<div class="info">
+			<label for="post-2" class="read-more-trigger">Offline Mode</label>
+			<input type="checkbox" class="read-more-state" id="post-2" />
+			<div class="read-more-wrap">
+			<div class="read-more-target">
+				<p style="font-size: 12px">Added: version 4.4.0/5.0.0 [<a href="https://cache.sqex-bridge.jp/guest/information/73264" target="_blank">x</a>]</p>
+				<h4>Home Screen</h4>
+				<img src="https://cache.sqex-bridge.jp/img/b8968e6e45bb2af792c36e99f06334a497ee21181665ce9ab769c4628f89c3f7">
+				<h4>(1) Free Battle</h4>
+				<p>Endlessly fight enemies for BP, materials, and to fill your enemy album.</p>
+				<p>Select the world and difficulty level, then tap the "Free Battle" button.</p>
+				<p>Battle can be conducted automatically by pressing the "Auto" button.</p>
+				<img src="https://cache.sqex-bridge.jp/img/2435ccf64270ff1f9bc92a9343e1ff72517ee40e476746905c136892b5c125a1">
+				<h4>(2) Main Quest</h4>
+				<p>Play through the entire story.</p>
+				<img src="https://cache.sqex-bridge.jp/img/2f2370abc8d16b79fb9508d16f1e0afd236cc4fc97a50f5f0e622ee438e61944">
+				<h4>(3) How to play</h4>
+				<p>Get a rundown on gameplay.</p>
+				<h4>(4) Craft</h4>
+				<p>Create accessories with materials to enhance your stats.</p>
+				<p>They can be equipped in the "Status" menu.</p>
+				<img src="https://cache.sqex-bridge.jp/img/c4a904c4b85dde34817e969aaeddcf670628f90fbf910e9401524dcc48873f3a">
+				<h4>(5) Status</h4>
+				<p>Level up and change Xehanort's equipment here.</p>
+				<p>"Change Deck" allows you to equip cards for use in battle.</p>
+				<p>You can let the game choose for you by tapping the "Optimize" button.</p>
+				<img src="https://cache.sqex-bridge.jp/img/e32da88c2c07da7b729de0dbf51093dd8c86b6706da293c69a871e42cda35d72">
+				<h4>(6) Album</h4>
+				<p>Fill up the Enemy Album and Card Album.</p>
+				<img src="https://cache.sqex-bridge.jp/img/8b3d83dd93fd55c01ed48bb9a39b745773fed5e34d7ba07b461c9060935d5a4a">
+				<p>Filling these will give you passive stat enhancements.</p>
+				<img src="https://cache.sqex-bridge.jp/img/7f1ec6e584ad08df42fcb51382ce23a395f81da0e962689d8180baf6061c48d9">
+				<h4>(7) Theatre</h4>
+				<p>Previously viewed scenes can be rewatched here.</p>
+				<img src="https://cache.sqex-bridge.jp/img/8db61710086a8e8dce1517d2708ed7c833429d92e2b449f22ce61e821d30be92">
+				<h4>(8) Shop</h4>
+				<p>Spend BP for cards and items.</p>
+				<img src="https://cache.sqex-bridge.jp/img/d3f1886c2bf3fb2e420cbfb4dcc871dd0e79c31f988a2a84e3d490a10c28f8fd">
+			</div>
+			</div>
+			
+		</div>
+		
+		<hr>
+		
+	</div>
+
+	<br>
+
+	<div id="footer">
+		<hr>
+		<p>
+			<a href="http://luxenvulpies.tumblr.com/" target="_blank">Tumblr</a> |
+			<a href="https://twitter.com/luxenvulpies" target="_blank">Twitter</a> |
+			<a href="https://www.youtube.com/channel/UChLBcZa_2Q5f6AeohaQlIEg/" target="_blank">YouTube</a>
+		</p>
+	</div>
+
+	<script>
+	function myFunction() {
+		var x = document.getElementById("myNavbar");
+		if (x.className === "navbar") {
+			x.className += " responsive";
+		} else {
+			x.className = "navbar";
+		}
+	}
+	</script>
+	
+</body>
+
+</html>

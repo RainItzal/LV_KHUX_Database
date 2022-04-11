@@ -5,10 +5,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style1.css" media="screen"/>
+	<link rel="stylesheet" href="style1.css" media="screen" title="light"/>
 	<link rel="shortcut icon" href="{Favicon}">
 
-	<title>KHUχDR Database: About</title>
+	<title>KHUχDR Database: Power of Hero</title>
 
 </head>
 
@@ -105,13 +105,20 @@
 	</div>
 
 	<div id="content">
-		<h3>About</h3>
-		<p>This is a KHUχDR database with info based on the Japanese version of the game. Updates are posted to the home page.</p>
-		<p>Created by Rain of the Luxen Vulpies party and <a href="http://luxenvulpies.tumblr.com/" target="_blank">blog</a>.</p>
-		<hr style="width: 10%" />
-		<p>The data comes from a variety of sources, being my own, Luxen Vulpies party members, and social media posts. Appropriate credits are stated/linked in the notes section or "Notes" sheet of a document or spreadsheet. It may not necessarily appear in the KHUχDR Database pages, but they are in the full document or spreadsheet which are linked on the "Links" page.</p>
-		<hr>
-		<a href="https://khuxdatabase.tumblr.com/post/172682621453/introduction" target="_blank">The preface of why and how this came to be.</a>
+		<h3>Power of Hero</h3>
+
+		<div id="buttons">
+			<button onclick="changeImage1();">Base</button>
+			<button onclick="changeImage2();">Upgrade 1</button>
+			<button onclick="changeImage3();">Upgrade 2</button>
+			<button onclick="changeImage4();">Upgrade 3</button>
+		</div>
+		
+		<img id='images' src='https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/PowerOfHero01.png'/>
+
+		<br>
+
+		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSAmG2gMrWnyRYqUs9oKGt0uBr5FcSkLfMM-Ng20bB3sibce-LaNYmUio2nxQhWg9ttF8NollecpeBf/pubhtml?gid=1635367164&amp;single=true&amp;widget=true&amp;headers=false&amp;chrome=false" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 	</div>
 
 	<br>
@@ -133,6 +140,27 @@
 		} else {
 			x.className = "navbar";
 		}
+	}
+	</script>
+	<script>
+	function changeImage1() {
+		let img1 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/PowerOfHero01.png';
+		document.getElementById('images').src = img1;
+	}
+
+	function changeImage2() {
+		let img2 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/PowerOfHero02.png';
+		document.getElementById('images').src = img2;
+	}
+
+	function changeImage3() {
+		let img3 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/PowerOfHero03.png';
+		document.getElementById('images').src = img3;
+	}
+
+	function changeImage4() {
+		let img4 = 'https://raw.githubusercontent.com/RainItzal/RainItzal.github.io/master/images/PowerOfHero04.png';
+		document.getElementById('images').src = img4;
 	}
 	</script>
 
